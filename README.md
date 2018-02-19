@@ -21,18 +21,18 @@ Here's an example of how this library can be used in its most basic form.
 ```ruby
 class BlogPostsController < ApplicationController
 
-  param_set :blog_post do |s|
+  param_set :blog_post do |r|
     # Always permit the title & content to be set by anyone
-    s.permit :title, :content
+    r.permit :title, :content
 
     # Only allow admin users to change the author of the blog post
     if current_user.admin?
-      s.permit :author_id
+      r.permit :author_id
     end
   end
 
   def update
-    @blog_post.update(param_set_for(@blog_post))
+    @blog_post.update(param_set(:blog_post))
     @blog_post.save!
   end
 
@@ -100,7 +100,7 @@ param_set(:blog_post, @blog_post, :allow_passwords => true)
 
 # Return all safe parameters for a given object. The name will be determined
 # automatically based on the model name (BlogPost -> blog_post etc...)
-param_set_for(@blog_post)
+param_set(@blog_post)
 ```
 
 In practice, you'll find that your controllers may look a little like this.
