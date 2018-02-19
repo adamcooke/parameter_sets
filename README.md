@@ -21,7 +21,7 @@ Here's an example of how this library can be used in its most basic form.
 ```ruby
 class BlogPostsController < ApplicationController
 
-  param_set :blog_post do |s, object|
+  param_set :blog_post do |s|
     # Always permit the title & content to be set by anyone
     s.permit :title, :content
 
