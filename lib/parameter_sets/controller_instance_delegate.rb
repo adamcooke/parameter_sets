@@ -13,7 +13,7 @@ module ParameterSets
           raise ParameterSetNotDefinedError, "No parameter set named #{name} is defined"
         end
       else
-        param_set_for(name)
+        param_set_for(name, object.is_a?(Hash) ? object : nil)
       end
     end
 

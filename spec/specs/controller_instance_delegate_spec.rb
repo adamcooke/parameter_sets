@@ -41,4 +41,14 @@ describe ParameterSets::ControllerInstanceDelegate do
     expect(delegate.param_set(post)[:title]).to eq "50 ways to permit parameters"
   end
 
+  it "should pass options through when finding by " do
+    option_value = nil
+    controller.class.param_set :post do |r, _, options|
+      r.permit :title
+      option_value = options[:some_option]
+    end
+    delegate.param_set(Post.new, :some_option => 'hello')
+    expect(option_value).to eq 'hello'
+  end
+
 end
