@@ -1,6 +1,6 @@
 # Parameter Sets
 
-[![Build Status](https://travis-ci.org/adamcooke/parameter_sets.svg?branch=master)](https://travis-ci.org/adamcooke/parameter_sets)
+[![Build Status](https://travis-ci.org/adamcooke/parameter_sets.svg?branch=master)](https://travis-ci.org/adamcooke/parameter_sets) [![Gem Version](https://badge.fury.io/rb/parameter_sets.svg)](https://badge.fury.io/rb/parameter_sets)
 
 Parameter Sets allows you to use a simple schema that defines which attributes are permitted to be mass assigned to Active Model objects. The key goals of the library are:
 
