@@ -1,5 +1,7 @@
 # Parameter Sets
 
+[![Build Status](https://travis-ci.org/adamcooke/parameter_sets.svg?branch=master)](https://travis-ci.org/adamcooke/parameter_sets)
+
 Parameter Sets allows you to use a simple schema that defines which attributes are permitted to be mass assigned to Active Model objects. The key goals of the library are:
 
 * To standardize a method of defining which attributes are permitted for mass assignment.
