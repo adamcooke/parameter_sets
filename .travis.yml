@@ -2,7 +2,8 @@ language: ruby
 rvm:
   - 2.3.6
   - 2.4.3
-  - 2.5.0
+  - 2.5.7
+  - 2.6.5
 cache: bundler
 script:
   - bundle exec rspec
